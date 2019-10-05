@@ -15,8 +15,9 @@
     justify-content: space-around;
     background-color: $theme-dark;
 
-    .section-meetings {
-
+    .section-side {
+      flex: 0 1 40%;
+      
       .meeting {
         display: flex;
         flex-flow: column wrap;
@@ -59,11 +60,8 @@
       }
     }
 
-    .section-options {
-      height: 100%;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: space-around;
+    .section-main {
+      flex: 0 1 50%;
 
       .clock {
         text-align: right;
@@ -78,24 +76,26 @@
         }
       }
 
-      .meeting-options {
-        display: flex;
-        flex-wrap: wrap;
+      .options-section {
+        .options {
+          display: flex;
+          flex-flow: row wrap;
 
-        .option {
-          flex: 0 50%;
-          text-align: center;
+          .option {
+            flex: 1 1 30%;
+            text-align: center;
 
-          .fa {
-            border: $btn-base-border;
-            border-radius: 50px;
-            padding: 25px;
-            margin: 20px;
-          }
+            .fa {
+              border: $btn-base-border;
+              border-radius: 50px;
+              padding: 25px;
+              margin: 20px;
+            }
 
-          div {
-            color: #a2a0a1;
-            font-size: 12px;
+            div {
+              color: #a2a0a1;
+              font-size: 12px;
+            }
           }
         }
       }
