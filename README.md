@@ -6,7 +6,15 @@
 
 ## Sass techniques
 
-### TODO
+- Install [node-sass](https://www.npmjs.com/package/node-sass) NPM package to compile the SCSS files to CSS. To install node-sass run the following command in your terminal: `npm install node-sass`.
+- Open the package.json file in a code editor. Add scripts section (if not available) add the dollowing command:
+```
+"scripts": {
+  ...
+  "scss": "node-sass --watch scss -o css"
+}
+```
+- Run the following command in the terminal: `npm run scss`.
 
 ## Flexbox techniques
 
