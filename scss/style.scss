@@ -6,108 +6,203 @@
   font-family: 'Open Sans', sans-serif;
   color: $header-color;
 
-  .main-container {
-    max-width: 900px;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: $theme-dark;
+  .home-page {
+    .main-container {
+      max-width: 900px;
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $theme-dark;
 
-    .section-side {
-      flex: 0 1 40%;
+      .section-side {
+        flex: 0 1 40%;
 
-      .meeting {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: flex-start;
-        background-color: $bg-meeting;
-        margin: 5px;
-        padding: 15px;
-        font-size: 12px;
+        .meeting {
+          display: flex;
+          flex-flow: column wrap;
+          align-items: flex-start;
+          background-color: $bg-meeting;
+          margin: 5px;
+          padding: 15px;
+          font-size: 12px;
 
-        &.active {
-          background-color: $bg-meeting-active;
+          &.active {
+            background-color: $bg-meeting-active;
+
+            input[type=button] {
+              background-color: $btn-active-bg;
+              border: $btn-active-border;
+              color: $header-color;
+            }
+          }
+
+          .meeting-info {
+            min-height: 50px;
+            margin-bottom: 20px;
+
+            p {
+              font-size: 16px;
+            }
+
+            span {
+              color: $text-color;
+            }
+          }
 
           input[type=button] {
-            background-color: $btn-active-bg;
-            border: $btn-active-border;
-            color: $header-color;
-          }
-        }
-
-        .meeting-info {
-          min-height: 50px;
-          margin-bottom: 20px;
-
-          p {
-            font-size: 16px;
-          }
-
-          span {
+            align-self: flex-end;
+            padding: 3px 25px;
+            background-color: $btn-base-bg;
+            border: $btn-base-border;
             color: $text-color;
           }
         }
+      }
 
-        input[type=button] {
-          align-self: flex-end;
-          padding: 3px 25px;
-          background-color: $btn-base-bg;
-          border: $btn-base-border;
-          color: $text-color;
+      .section-main {
+        flex: 0 1 50%;
+
+        .clock {
+          text-align: right;
+
+          p {
+            font-size: 30px;
+          }
+
+          div {
+            color: $text-color;
+            font-size: 10px;
+          }
+        }
+
+        .options-section {
+          margin: 20px 0;
+
+          .options {
+            display: flex;
+            flex-flow: row wrap;
+
+            .option {
+              //change to flex: 1 1 33%; if more than four items persist
+              flex: 1 1 50%;
+              text-align: center;
+
+              .material-icons {
+                border: $btn-base-border;
+                border-radius: 50px;
+                padding: 20px;
+              }
+
+              div {
+                color: #a2a0a1;
+                font-size: 12px;
+                margin: 10px 0 20px 0;
+              }
+            }
+          }
+        }
+
+        .volume-settings {
+          text-align: right;
+
+          i {
+            padding: 0 10px;
+          }
         }
       }
     }
+  }
 
-    .section-main {
-      flex: 0 1 50%;
+  .meeting-page {
+    .main-container {
+      max-width: 900px;
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      background-color: $theme-dark;
 
-      .clock {
-        text-align: right;
+      .section-side {
+        flex: 0 1 30% ;
 
-        p {
-          font-size: 30px;
-        }
-
-        div {
-          color: $text-color;
-          font-size: 10px;
-        }
-      }
-
-      .options-section {
-        margin: 20px 0;
-
-        .options {
+        .meeting.active {
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: column wrap;
+          justify-content: space-around;
+          background-color: $bg-meeting-active;
+          font-size: 12px;
+          height: 100%;
+          padding: 0 20px;
+          
+          .clock {
+            font-size: 30px;
+          }
 
-          .option {
-            //change to flex: 1 1 33%; if more than four items persist
-            flex: 1 1 50%;
-            text-align: center;
-
-            .material-icons {
-              border: $btn-base-border;
-              border-radius: 50px;
-              padding: 20px;
+          .meeting-info {
+            margin-bottom: 150px;
+                    
+            p {
+              font-size: 16px;
             }
 
-            div {
-              color: #a2a0a1;
-              font-size: 12px;
-              margin: 10px 0 20px 0;
+            span {
+              color: $text-color;
             }
           }
         }
       }
 
-      .volume-settings {
-        text-align: right;
+      .section-main {
+        flex: 0 1 50%;
 
-        i {
-          padding: 0 10px;
+        .clock {
+          text-align: right;
+
+          p {
+            font-size: 30px;
+          }
+
+          div {
+            color: $text-color;
+            font-size: 10px;
+          }
+        }
+
+        .options-section {
+          margin: 20px 0;
+
+          .options {
+            display: flex;
+            flex-flow: row wrap;
+
+            .option {
+              //change to flex: 1 1 33%; if more than four items persist
+              flex: 1 1 50%;
+              text-align: center;
+
+              .material-icons {
+                border: $btn-base-border;
+                border-radius: 50px;
+                padding: 20px;
+              }
+
+              div {
+                color: #a2a0a1;
+                font-size: 12px;
+                margin: 10px 0 20px 0;
+              }
+            }
+          }
+        }
+
+        .volume-settings {
+          text-align: right;
+
+          i {
+            padding: 0 10px;
+          }
         }
       }
     }
