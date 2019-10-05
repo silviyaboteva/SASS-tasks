@@ -17,7 +17,7 @@
 
     .section-side {
       flex: 0 1 40%;
-      
+
       .meeting {
         display: flex;
         flex-flow: column wrap;
@@ -77,24 +77,27 @@
       }
 
       .options-section {
+        margin: 20px 0;
+
         .options {
           display: flex;
           flex-flow: row wrap;
 
           .option {
-            flex: 1 1 30%;
+            //change to flex: 1 1 33%; if more than four items persist
+            flex: 1 1 50%;
             text-align: center;
 
-            .fa {
+            .material-icons {
               border: $btn-base-border;
               border-radius: 50px;
-              padding: 25px;
-              margin: 20px;
+              padding: 20px;
             }
 
             div {
               color: #a2a0a1;
               font-size: 12px;
+              margin: 10px 0 20px 0;
             }
           }
         }

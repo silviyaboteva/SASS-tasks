@@ -49,20 +49,22 @@
         * .main-container .section-main .clock div {
           color: #a2a0a1;
           font-size: 10px; }
-      * .main-container .section-main .options-section .options {
-        display: flex;
-        flex-flow: row wrap; }
-        * .main-container .section-main .options-section .options .option {
-          flex: 1 1 30%;
-          text-align: center; }
-          * .main-container .section-main .options-section .options .option .fa {
-            border: 1px solid #424041;
-            border-radius: 50px;
-            padding: 25px;
-            margin: 20px; }
-          * .main-container .section-main .options-section .options .option div {
-            color: #a2a0a1;
-            font-size: 12px; }
+      * .main-container .section-main .options-section {
+        margin: 20px 0; }
+        * .main-container .section-main .options-section .options {
+          display: flex;
+          flex-flow: row wrap; }
+          * .main-container .section-main .options-section .options .option {
+            flex: 1 1 50%;
+            text-align: center; }
+            * .main-container .section-main .options-section .options .option .material-icons {
+              border: 1px solid #424041;
+              border-radius: 50px;
+              padding: 20px; }
+            * .main-container .section-main .options-section .options .option div {
+              color: #a2a0a1;
+              font-size: 12px;
+              margin: 10px 0 20px 0; }
       * .main-container .section-main .volume-settings {
         text-align: right; }
         * .main-container .section-main .volume-settings i {
