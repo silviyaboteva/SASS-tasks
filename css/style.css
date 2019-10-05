@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff; }
+  * .main-container {
+    max-width: 900px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #201e1f; }
+    * .main-container .section-meetings .meeting {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      background-color: #2d2b2c;
+      margin: 5px;
+      padding: 15px;
+      font-size: 12px; }
+      * .main-container .section-meetings .meeting.active {
+        background-color: #474972; }
+        * .main-container .section-meetings .meeting.active input[type=button] {
+          background-color: #6364a7;
+          border: 1px solid #5e5e9a;
+          color: #ffffff; }
+      * .main-container .section-meetings .meeting .meeting-info {
+        min-height: 50px;
+        margin-bottom: 20px; }
+        * .main-container .section-meetings .meeting .meeting-info p {
+          font-size: 16px; }
+        * .main-container .section-meetings .meeting .meeting-info span {
+          color: #a2a0a1; }
+      * .main-container .section-meetings .meeting input[type=button] {
+        align-self: flex-end;
+        padding: 3px 25px;
+        background-color: #2d2b2c;
+        border: 1px solid #424041;
+        color: #a2a0a1; }
+    * .main-container .section-options {
+      height: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-around; }
+      * .main-container .section-options .clock {
+        text-align: right; }
+        * .main-container .section-options .clock p {
+          font-size: 30px; }
+        * .main-container .section-options .clock div {
+          color: #a2a0a1;
+          font-size: 10px; }
+      * .main-container .section-options .meeting-options {
+        display: flex;
+        flex-wrap: wrap; }
+        * .main-container .section-options .meeting-options .option {
+          flex: 0 50%;
+          text-align: center; }
+          * .main-container .section-options .meeting-options .option .fa {
+            border: 1px solid #424041;
+            border-radius: 50px;
+            padding: 25px;
+            margin: 20px; }
+          * .main-container .section-options .meeting-options .option div {
+            color: #a2a0a1;
+            font-size: 12px; }
+      * .main-container .section-options .volume-settings {
+        text-align: right; }
+        * .main-container .section-options .volume-settings i {
+          padding: 0 10px; }

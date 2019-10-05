@@ -2,43 +2,67 @@
 <html>
 <head>
   <title>Task 2: CSS and Flexbox</title>
-
-  <link rel="stylesheet" type="text/css" href="./style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 </head>
 
 <body>
   <div class="main-container">
     <div class="section-meetings">
-      <div class="meeting selected">
-        meeting 1
+      <div class="meeting active">
+        <div class="meeting-info">
+          <span>12:00pm - 1:00pm</span>
+          <p>Contoso Briefling</p>
+          <span>Christina Rollin</span>
+        </div>
+        <input type="button" value="Join"/>
       </div>
       <div class="meeting">
-        meeting 2
+        <div class="meeting-info">
+          <span>1:00pm - 3:00pm</span>
+          <p>Weekly Status Meeting</p>
+          <span>Justin Harrison</span>
+        </div>
+        <input type="button" value="Join"/>
       </div>
       <div class="meeting">
-        meeting 3
+        <div class="meeting-info">
+          <span>3:00pm - 3:45pm</span>
+          <p>Customer user study report out</p>
+          <span>Brian Thomas</span>
+        </div>
+        <input type="button" value="Join"/>
       </div>
     </div>
     <div class="section-options">
       <div class="clock">
-        12:05 PM
+        <p>12:05 PM</p>
+        <div>Conference Room 1246</div>
+        <div>555-555-1706</div>
       </div>
-      <div class="meetiing-options">
+      <div class="meeting-options">
         <div class="option">
-          option 1
+          <i class="fa fa-users"></i>
+          <div>New Meeting</div>
         </div>
         <div class="option">
-          option 2
+          <i class="fa fa-phone"></i>
+          <div>Call</div>
         </div>
         <div class="option">
-          option 3
+          <i class="fa fa-video-camera"></i>
+          <div>Present</div>
         </div>
         <div class="option">
-          option 4
+          <i class="fa fa-sign-in"></i>
+          <div>Invite this room</div>
         </div>
       </div>
       <div class="volume-settings">
-        volume image
+        <i class="fa fa-volume-up"></i>
+        <i class="fa fa-ellipsis-h"></i>
+        <i class="fa fa-cog"></i>
       </div>
     </div>
   </div>
