@@ -1,10 +1,11 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 * {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  color: $header-color;
+  color: $active-color;
 
   .home-page {
     .main-container {
@@ -34,7 +35,7 @@
             input[type=button] {
               background-color: $btn-active-bg;
               border: $btn-active-border;
-              color: $header-color;
+              color: $active-color;
             }
           }
 
@@ -47,16 +48,13 @@
             }
 
             span {
-              color: $text-color;
+              color: $default-color;
             }
           }
 
           input[type=button] {
             align-self: flex-end;
-            padding: 3px 25px;
-            background-color: $btn-base-bg;
-            border: $btn-base-border;
-            color: $text-color;
+            @include button;
           }
         }
       }
@@ -72,7 +70,7 @@
           }
 
           div {
-            color: $text-color;
+            color: $default-color;
             font-size: 10px;
           }
         }
@@ -96,7 +94,7 @@
               }
 
               div {
-                color: #a2a0a1;
+                color: $default-color;
                 font-size: 12px;
                 margin: 10px 0 20px 0;
               }
@@ -148,60 +146,109 @@
             }
 
             span {
-              color: $text-color;
+              color: $default-color;
             }
           }
         }
       }
-
       .section-main {
-        flex: 0 1 50%;
+        flex: 0 1 70%;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
 
-        .clock {
-          text-align: right;
+        .navigation {
+          display: flex;
+          flex-flow: row nowrap;
+          margin: 30px 20px;
 
-          p {
-            font-size: 30px;
-          }
+          .nav-item {
+            margin: 0 15px;
+            border-bottom: 1px solid $default-color;
 
-          div {
-            color: $text-color;
-            font-size: 10px;
+            &.selected {
+              p {
+                color: $active-color;
+              }
+            }
+            p {
+              color: $default-color;
+            }
           }
         }
 
-        .options-section {
-          margin: 20px 0;
+        .container{
+          display: flex;
+          justify-content: space-between;
+          margin: 0 35px;
+          flex: 0 0 70%;
 
-          .options {
-            display: flex;
-            flex-flow: row wrap;
-
-            .option {
-              //change to flex: 1 1 33%; if more than four items persist
-              flex: 1 1 50%;
-              text-align: center;
+          .participants {
+            .title {
+              @include title;
+            }
+            .participant {
+              display: flex;
+              align-items: center;
+              padding: 5px 0;
 
               .material-icons {
-                border: $btn-base-border;
-                border-radius: 50px;
-                padding: 20px;
+                background-color: grey;
+                border-radius: 50%;
+                padding: 5px;
               }
 
               div {
-                color: #a2a0a1;
-                font-size: 12px;
-                margin: 10px 0 20px 0;
+                margin-left: 20px;
+                font-size: 14px;
+              }
+            }
+          }
+
+          .actions {
+            .title {
+              @include title;
+            }
+
+            button {
+              @include button;
+              display: flex;
+              align-items: center;
+              margin: 5px 0;
+
+              .material-icons {
+                font-size: 18px;
+                margin: 5px;
               }
             }
           }
         }
 
-        .volume-settings {
-          text-align: right;
+        .call-section {
+          display: flex;
+          justify-content: space-around;
+          align-items: baseline;
 
-          i {
-            padding: 0 10px;
+          .layout-settings {
+            button {
+              @include button;
+              display: flex;
+              align-items: center;
+              margin: 5px 0;
+            }
+          }
+
+          .call-settings {
+            .material-icons {
+              background-color: $default-color;
+              border-radius: 50%;
+              padding: 7px;
+              margin: 0 3px;
+
+              &.call-end {
+                background-color: #9b2e41;
+              }
+            }
           }
         }
       }

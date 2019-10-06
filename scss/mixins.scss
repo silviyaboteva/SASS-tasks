@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+@mixin title {
+    color: $default-color;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+@mixin button {
+    padding: 3px 25px;
+    background-color: $btn-base-bg;
+    border: $btn-base-border;
+    color: $default-color;
+}
